@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-BBGRG13RS2"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'G-BBGRG13RS2');
+	</script>
+
     <meta charset="utf-8">
     <meta name="viewport" content='width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, user-scalable=no, shrink-to-fit=yes'>
     <title>Unity WebGL Player | beinan-challenge</title>
@@ -34,12 +45,12 @@
 </head>
 <body>
     <!--IMAGETARGETS-->
-		<imagetarget id='bear' src='targets/bear.png'></imagetarget>
-		<imagetarget id='bfly' src='targets/bfly.png'></imagetarget>
-		<imagetarget id='flower' src='targets/flower.png'></imagetarget>
-		<imagetarget id='lady' src='targets/lady.png'></imagetarget>
-		<imagetarget id='reel' src='targets/reel.png'></imagetarget>
-		<imagetarget id='rmn' src='targets/rmn.png'></imagetarget>
+		<imagetarget id='Q1' src='targets/TEX_ImageTarget_Q1.jpg'></imagetarget>
+		<imagetarget id='Q2' src='targets/TEX_ImageTarget_Q2.jpg'></imagetarget>
+		<imagetarget id='Q3' src='targets/TEX_ImageTarget_Q3.jpg'></imagetarget>
+		<imagetarget id='Q4' src='targets/TEX_ImageTarget_Q4.jpg'></imagetarget>
+		<imagetarget id='Q5' src='targets/TEX_ImageTarget_Q5.jpg'></imagetarget>
+		<imagetarget id='Projection' src='targets/TEX_ImageTarget_Projection.jpg'></imagetarget>
 
     <video id="webcam-video" muted autoplay playsinline style="width:1px;position:absolute"></video>
     <!-- <video id="webcam-video" muted autoplay playsinline style="width:100%; height:100%; object-fit:cover; position:absolute"></video> -->
@@ -68,7 +79,7 @@
         <p id="errorText" style="text-align: center; width:60vw; color:white"></p>
     </div>
     <div id="unity-container" class="unity-mobile">
-        <canvas id="unity-canvas" style="width: 100%; height: 100%; background: #0000; z-index: -99"></canvas>
+        <canvas id="unity-canvas" style="width: 100%; height: 100%; background-image: url('TemplateData/progress-bg.jpg'); background-repeat: no-repeat; background-size: cover; z-index: -99"></canvas>
         <div id="unity-loading-bar">
             <div id="unity-logo"></div>
             <div id="unity-progress-bar-empty">
@@ -114,9 +125,9 @@
                     frameworkUrl: "Build/beinan-challenge-webgl.framework.js",
                     codeUrl: "Build/beinan-challenge-webgl.wasm",
                     streamingAssetsUrl: "StreamingAssets",
-                    companyName: "Domediagumi",
+                    companyName: "Beinan Challenge",
                     productName: "beinan-challenge",
-                    productVersion: "0.2.4",
+                    productVersion: "0.2.3",
                     //webglContextAttributes: { "preserveDrawingBuffer": true },
                     // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
                     // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
@@ -128,9 +139,19 @@
                     window.unityInstance = unityInstance;
                     RequestWebcam();
                     loadingBar.style.display = "none";
+					
+					canvas.style.width = document.documentElement.clientWidth + 'px';
+					canvas.style.height = document.documentElement.clientHeight + 'px';
                 });
                 loadingBar.style.display = "block";
             }
+			
+			window.onresize = function()
+			{
+				canvas.style.width = document.documentElement.clientWidth + 'px';
+				canvas.style.height = document.documentElement.clientHeight + 'px';
+			};
+			
             //Set Facing Mode here ('environment', 'user', '')
 		window.unityFacingMode = "environment"
             window.WEBCAM_SETTINGS = {
@@ -268,5 +289,33 @@
             }
             
     </script>
+	
+	<script>
+		function GA_SendEvent(event_name) 
+		{
+			gtag("event", event_name);
+		}
+		
+		function GA_SendEvent_String(event_name, event_parameter) 
+		{
+			gtag("event", event_name, {
+			'event_parameter': event_parameter
+			});
+		}
+		
+		function GA_SendEvent_Integer(event_name, event_parameter) 
+		{
+			gtag("event", event_name, {
+			'event_parameter': event_parameter
+			});
+		}
+		
+		function GA_SendEvent_Boolean(event_name, event_parameter) 
+		{
+			gtag("event", event_name, {
+			'event_parameter': event_parameter
+			});
+		}
+	</script>
 </body>
 </html>
