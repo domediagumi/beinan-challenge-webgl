@@ -1,6 +1,5 @@
 <linker>
   <assembly fullname="Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
-    <type fullname="PuyumaChallenge.AudioPlayer" preserve="all" />
     <type fullname="PuyumaChallenge.Checkpoint" preserve="all" />
     <type fullname="PuyumaChallenge.InfoBar" preserve="all" />
     <type fullname="PuyumaChallenge.LoadingScreen" preserve="all" />
@@ -62,14 +61,8 @@
     <type fullname="TMPro.TMP_FontWeightPair" preserve="nothing" serialized="true" />
     <type fullname="TMPro.VertexGradient" preserve="nothing" serialized="true" />
   </assembly>
-  <assembly fullname="UnityEditor.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
-    <type fullname="UnityEditor.Audio.AudioMixerSnapshotController" preserve="all" />
-  </assembly>
   <assembly fullname="UnityEngine.AudioModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
-    <type fullname="UnityEngine.Audio.AudioMixer" preserve="all" />
-    <type fullname="UnityEngine.Audio.AudioMixerGroup" preserve="all" />
     <type fullname="UnityEngine.AudioClip" preserve="all" />
-    <type fullname="UnityEngine.AudioSource" preserve="all" />
   </assembly>
   <assembly fullname="UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
     <type fullname="UnityEngine.GameObject" preserve="all" />
@@ -79,7 +72,6 @@
     <type fullname="UnityEngine.Shader" preserve="all" />
     <type fullname="UnityEngine.Sprite" preserve="all" />
     <type fullname="UnityEngine.Texture2D" preserve="all" />
-    <type fullname="UnityEngine.Transform" preserve="all" />
     <type fullname="UnityEngine.U2D.SpriteAtlas" preserve="all" />
     <type fullname="UnityEngine.Events.PersistentCallGroup" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.Events.UnityEvent" preserve="nothing" serialized="true" />
